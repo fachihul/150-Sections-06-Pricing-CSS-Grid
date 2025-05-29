@@ -1,0 +1,127 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    color: #787978;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    color: #333;
+}
+ul {
+    list-style: none;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.section-padding {
+    padding: 80px 0;
+}
+.section-header {
+    text-align: center;
+    margin: 50px 0;
+}
+.section-header h2 span {
+    color: #2fa55e;
+}
+.row-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    justify-items: center;
+}
+.single-pricing-box {
+    text-align: center;
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    padding: 20px;
+}
+.single-pricing-box h3 {
+    text-transform: uppercase;
+}
+.pricing-icon {
+    font-size: 3rem;
+    color: #333;
+    margin: 20px 0;
+}
+.pricing-lists {
+    text-align: left;
+    margin-bottom: 20px;
+}
+.pricing-lists ul {
+    margin: 0;
+    padding-left: 20px;
+    line-height: 32px;
+}
+.pricing-lists ul li {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+.pricing-lists ul li::before {
+    content: "\f00c";
+    font-family: fontAwesome;
+    color: #2fa55e;
+    padding-right: 10px;
+}
+.pricing-lists ul li.off::before {
+    content: "\f00d";
+    font-family: fontAwesome;
+    color: #e74c3c;
+}
+.pricing-lists ul li:hover {
+    padding-left: 5px;
+}
+.single-pricing-box .pricing-count {
+    text-transform: none;
+    margin-bottom: 16px;
+}
+.single-pricing-box:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    transition: all 0.3s ease-in-out;
+    border-color: #2fa55e;
+    cursor: pointer;
+}
+.single-pricing-box:hover .pricing-icon {
+    color: #2fa55e;
+}
+a.bordered-btn {
+    display: inline-block;
+    padding: 10px 30px;
+    border: 1px solid #2fa55e;
+    border-radius: 50px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+a.bordered-btn:hover {
+    background-color: #2fa55e;
+    color: #fff;
+}
